@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Topnav/>
+    <TopNav/>
     <div class="content">
       <aside>边栏</aside>
       <main>主内容</main>
@@ -11,8 +11,8 @@
 
 <!--</style>-->
 <script>
-import Topnav from "../components/Topnav.vue"
+import TopNav from "../components/Topnav.vue"
 export default {
-  components: {Topnav}
+  components: {TopNav}
 }
 </script>
