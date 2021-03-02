@@ -1,6 +1,6 @@
 import {createApp} from "vue";
 import App from "./App.vue";
-import "./index.css";
+import "./index.scss";
 import {createWebHashHistory, createRouter} from "vue-router";
 import Home from './views/Home.vue'
 import Dock from './views/Dock.vue'
@@ -10,7 +10,7 @@ const router = createRouter({
     history: history,
     routes:[
         {path: '/', component: Home},
-        {path:'/doc', component: Dock}
+        {path:'/dock', component: Dock}
     ]
 });
 

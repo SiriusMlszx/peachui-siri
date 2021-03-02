@@ -8,3 +8,6 @@
     <main>主内容</main>
   </div>
 </template>
+<!--<style lang="scss" scoped>-->
+
+<!--</style>-->
