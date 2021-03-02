@@ -1,6 +1,5 @@
 <template>
   <router-view/>
-  <router-link to="/">aaa</router-link>
 </template>
 
 <script>
