@@ -1,3 +1,3 @@
 <template>
-  <p>switch文档</p>
+  <div>button</div>
 </template>

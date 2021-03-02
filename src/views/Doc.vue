@@ -6,16 +6,16 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/dock/switch">Switch 组件</router-link>
+            <router-link to="/doc/switch">Switch 组件</router-link>
           </li>
           <li>
-            <router-link to="/dock/button">Button 组件</router-link>
+            <router-link to="/doc/button">Button 组件</router-link>
           </li>
           <li>
-            <router-link to="/dock/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">Dialog 组件</router-link>
           </li>
           <li>
-            <router-link to="/dock/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
         </ol>
       </aside>
@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import TopNav from "../components/Topnav.vue";
+import TopNav from "../components/TopNav.vue";
 import {inject, Ref} from "vue";
 
 export default {

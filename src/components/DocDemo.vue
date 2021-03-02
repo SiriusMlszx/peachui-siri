@@ -1,3 +1,4 @@
 <template>
-  <p>switch文档</p>
+<div>doc</div>
 </template>
+

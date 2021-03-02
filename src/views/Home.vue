@@ -6,14 +6,14 @@
       <h2>一个厉害的UI框架</h2>
       <div class="actions">
         <a href="https://github.com">GitHub</a>
-        <router-link to="/dock">开始</router-link>
+        <router-link to="/doc">开始</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import TopNav from "../components/Topnav.vue";
+import TopNav from "../components/TopNav.vue";
 
 export default {
   components: {TopNav}
