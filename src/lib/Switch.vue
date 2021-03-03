@@ -1,5 +1,5 @@
 <template>
-    <button @click="toggle" :class="{checked: value}">
+    <button class='siri-switch' @click="toggle" :class="{'siri-checked': value}">
       <span></span>
     </button>
 </template>
@@ -18,10 +18,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.siri-switch  {
   height: $h;
   width: $h*2;
   border: none;
@@ -38,7 +38,7 @@ button {
     border-radius: $h2 / 2;
     transition: all 250ms;
     }
-    &.checked {
+    &.siri-checked {
       background: #FF879D;
 
       > span {
@@ -51,7 +51,7 @@ button {
     &:active{
       > span{width: $h2 + 4px;}
     }
-    &.checked:active{
+    &.siri-checked:active{
       > span{width: $h2 + 4px;
         margin-left: -4px;
       }
