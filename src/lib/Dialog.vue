@@ -1,26 +1,68 @@
 <template>
-  <div class="siri-dialog-overlay"></div>
-  <div class="siri-dialog-wrapper">
-    <div class="siri-dialog">
-      <header>标题<span class="siri-dialog-close"></span></header>
-      <main>
-        <p>第一行字</p>
-        <p>第二行字</p>
-      </main>
-      <footer>
-        <Button level="main">OK</Button>
-        <Button>Cancel</Button>
-      </footer>
-    </div>
-  </div>
+  <template v-if="visible">
+    <Teleport to="body">
+      <div class="siri-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="siri-dialog-wrapper">
+        <div class="siri-dialog">
+          <header>
+            <slot name="title"/>
+            <span @click="close" class="siri-dialog-close"></span></header>
+          <main>
+            <slot name="content"/>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
+      </div>
+    </Teleport>
+  </template>
 </template>
 
 <script lang="ts">
 import Button from "./Button.vue";
 
 export default {
-  name: "Dialog",
-  components: {Button}
+  props: {
+    visible: {
+      type: Boolean,
+      default: false,
+    },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true
+    },
+    ok:{
+      type: Function
+    },
+    cancel: {
+      type: Function
+    }
+  },
+  components: {Button},
+  setup(props, context) {
+    const close = () => {
+      context.emit("update:visible", false);
+    };
+    const onClickOverlay = () => {
+      if (props.closeOnClickOverlay) {
+        close();
+      }
+    };
+    const ok = () => {
+      if(props.ok && props.ok()!== false){
+        close()
+      }
+    };
+    const cancel = () => {
+      context.emit("cancel");
+      close()
+    };
+    return {
+      close, onClickOverlay, ok, cancel
+    };
+  }
 };
 </script>
 
@@ -52,7 +94,7 @@ $border-color: #d9d9d9;
     z-index: 11;
   }
 
-  header{
+  header {
     padding: 12px 16px;
     border-bottom: 1px solid $border-color;
     display: flex;
