@@ -1,0 +1,25 @@
+<template>
+<div>dialog</div>
+  <h1>示例</h1>
+  <header>标题</header>
+  <main>
+    <p>第一行字</p>
+    <p>第二行字</p>
+  </main>
+  <footer>
+    <Button>OK</Button>
+    <Button>Cancel</Button>
+  </footer>
+</template>
+
+<script lang="ts">
+import Button from "./Button.vue";
+export default {
+name: "Dialog",
+  components: {Button}
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
