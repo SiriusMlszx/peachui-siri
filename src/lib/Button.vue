@@ -172,7 +172,7 @@ $grey:grey;
     }
   }
   &.siri-theme-link, &.siri-theme-text{
-    &[disaboed]{
+    &[disabled]{
       cursor: not-allowed;
       color: $grey;
     }
