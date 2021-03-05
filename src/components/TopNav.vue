@@ -1,16 +1,17 @@
 <template>
   <div class="topNav">
-    <div class="logo">
+    <router-link to='/' class="logo">
       <svg class="icon">
         <use xlink:href="#icon-siri"></use>
-      </svg></div>
+      </svg>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
       </li>
     </ul>
     <svg v-if="toggleMenuButtonVisible"
-          class="toggleAside"  @click="toggleMenu">
+         class="toggleAside" @click="toggleMenu">
       <use xlink:href="#icon-menu"></use>
     </svg>
   </div>
@@ -20,10 +21,10 @@
 import {inject, Ref} from "vue";
 
 export default {
-  props:{
-    toggleMenuButtonVisible:{
+  props: {
+    toggleMenuButtonVisible: {
       type: Boolean,
-      default:false,
+      default: false,
     }
   },
   setup() {
@@ -46,27 +47,31 @@ $color: #007974;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
 
   > .logo {
     max-width: 6em;
     margin-right: auto;
-    >svg{
+
+    > svg {
       width: 32px;
-      height:32px;
+      height: 32px;
     }
   }
+
   > .menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+
     > li {
       margin: 0 1em;
     }
   }
-  > .toggleAside{
+
+  > .toggleAside {
     width: 32px;
     height: 32px;
     position: absolute;
@@ -75,7 +80,8 @@ $color: #007974;
     transform: translateY(-50%);
     display: none;
     background: fade-out(black, 0.9);
-    &:hover{
+
+    &:hover {
       cursor: pointer;
     }
   }
@@ -87,7 +93,7 @@ $color: #007974;
     > .logo {
       margin: auto;
     }
-    >.toggleAside{
+    > .toggleAside {
       display: inline-block;
     }
   }
