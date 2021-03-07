@@ -1,8 +1,12 @@
+<demo>
+支持 disabled
+</demo>
 <template>
   <Switch v-model:value="bool" disabled />
 </template>
 
 <script lang="ts">
+// 相对路径要改为自己的
 import Switch from '../lib/Switch.vue'
 import {
   ref

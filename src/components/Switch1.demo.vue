@@ -1,8 +1,13 @@
+<demo>
+常规用法
+</demo>
+
 <template>
-  <Switch v-model:value="bool" />
+  <Switch v-model:value="bool"/>
 </template>
 
 <script lang="ts">
+// 相对路径要改为自己的
 import Switch from '../lib/Switch.vue'
 import {
   ref
