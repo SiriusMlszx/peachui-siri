@@ -5,7 +5,7 @@
       <div class="banner">
         <h1>Peach UI</h1>
         <p class="actions">
-          <a href="https://github.com">GitHub</a>
+          <a href="https://github.com/SiriusMlszx/peachui-siri">GitHub</a>
           <router-link to="/doc">探索</router-link>
         </p>
       </div>
