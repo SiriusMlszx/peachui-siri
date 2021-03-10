@@ -1,5 +1,5 @@
 {
-  "name": "peachui",
+  "name": "peachui-siri",
   "version": "0.0.2",
   "files": [
     "dist/lib/*"
