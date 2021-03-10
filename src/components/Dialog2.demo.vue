@@ -1,5 +1,5 @@
 <demo>
-一键打开 Dialog
+可以快捷关闭
 </demo>
 <template>
   <div>
@@ -10,12 +10,11 @@
 <script lang="ts">
 import Button from '../lib/Button.vue'
 import {
-  ref,
   h
 } from 'vue'
 import {
   openDialog
-} from '../lib/openDialog'
+} from "../lib"
 export default {
   components: {
     Button
@@ -23,8 +22,8 @@ export default {
   setup() {
     const showDialog = () => {
       openDialog({
-        title: h('strong', {}, '标题'),
-        content: '你好',
+        title: h('strong', {}, '这是一个对话框'),
+        content: '点框外任意一处就可以关闭',
         ok() {
           console.log('ok')
         },

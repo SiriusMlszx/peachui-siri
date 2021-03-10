@@ -3,11 +3,10 @@
     <div class="topNavAndBanner">
       <TopNav/>
       <div class="banner">
-        <h1>SiriUI</h1>
-        <h2>一个厉害的UI框架</h2>
+        <h1>Peach UI</h1>
         <p class="actions">
           <a href="https://github.com">GitHub</a>
-          <router-link to="/doc">开始</router-link>
+          <router-link to="/doc">探索</router-link>
         </p>
       </div>
     </div>
@@ -17,14 +16,14 @@
           <svg>
             <use xlink:href="#icon-vue"></use>
           </svg>
-          <h3>基于 Vue3</h3>
-          <p>骄傲地使用了Vue3 Composition API</p>
+          <h3>Vue3</h3>
+          <p>使用了Composition API</p>
         </li>
         <li>
           <svg>
             <use xlink:href="#icon-ts"></use>
           </svg>
-          <h3>基于 TypeScript</h3>
+          <h3>TypeScript</h3>
           <p>源代码采用TypeScript书写</p>
         </li>
         <li>
@@ -48,13 +47,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
+$pink: #fa7b83;
 $border-radius: 4px;
-$color: #007974;
+$color: #f17070;
 .features{
     margin: 64px auto;
   padding: 0 16px;
 
+  @media (max-width: 500px){
+    >ul{
+      >li{
+        padding-left: 30px;
+        width: 100%;
+      }
+    }
+  }
     @media (min-width: 800px){
       width: 800px;
       >ul{
@@ -101,7 +108,7 @@ $color: #007974;
     }
   }
 .topNavAndBanner{
-  background: linear-gradient(145deg, rgba(227,255,253,1) 0%, rgba(183,233,230,1) 100%);
+  background:  linear-gradient(45deg, rgba(255,248,205,1) 0%, rgba(251,195,168,1) 46%, rgba(248,152,148,1) 90%, rgba(248,144,144,1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 .banner{
@@ -114,8 +121,8 @@ $color: #007974;
   > .actions{
     padding: 8px 0;
     a{
-      margin: 0 8px;
-      background: $green;
+      margin: 20px 8px;
+      background: $pink;
       color: white;
       display: inline-block;
       padding: 8px 24px;

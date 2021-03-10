@@ -15,19 +15,19 @@
             <router-link to="/doc/get-started">开始使用</router-link>
           </li>
         </ol>
-        <h2>组件列表</h2>
+        <h2 class="app">组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            <router-link to="/doc/switch">Switch</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            <router-link to="/doc/button">Button</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">Dialog</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/tabs">Tabs</router-link>
           </li>
         </ol>
       </aside>
@@ -53,6 +53,9 @@ export default {
 
 <style lang="scss" scoped>
 $aside-index:10;
+.app{
+  margin-top: 15px;
+}
 .layout {
   display: flex;
   flex-direction: column;
@@ -88,7 +91,8 @@ $aside-index:10;
 }
 
 aside {
-  background: lightblue;
+  background: #fbe5bf;
+  color: #f78b8b;
   width: 150px;
   position: fixed;
   top: 0;

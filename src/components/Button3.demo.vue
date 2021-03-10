@@ -1,12 +1,12 @@
 <demo>
-支持 level
+可以改变按钮种类
 </demo>
 <template>
   <div>
     <div>
-      <Button level="main">主要按钮</Button>
-      <Button>普通按钮</Button>
-      <Button level="danger">危险按钮</Button>
+      <Button level="main">高高亮亮按钮</Button>
+      <Button>普普通通按钮</Button>
+      <Button level="danger">危危险险按钮</Button>
     </div>
     <div>
       <Button theme="link" level="main">主要链接按钮</Button>

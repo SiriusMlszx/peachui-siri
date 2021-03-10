@@ -1,10 +1,17 @@
 <demo>
-常规使用
+常规用法
 </demo>
 <template>
   <Tabs v-model:selected="x">
-    <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2">内容2</Tab>
+    <Tab title="早饭">
+      土豆饼、牛奶、鸡蛋、虾饺、肠粉
+    </Tab>
+    <Tab title="午饭">
+      辣子鸡、水煮鱼、口水鸡、夫妻肺片
+    </Tab>
+    <Tab title="晚饭">
+      火锅、烧烤
+    </Tab>
   </Tabs>
 </template>
 
@@ -20,7 +27,7 @@ export default {
     Tab
   },
   setup() {
-    const x = ref('导航1')
+    const x = ref('早饭')
     return {
       x
     }

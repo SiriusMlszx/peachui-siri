@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #007974;
+$color: #ea4d4d;
 .topNav {
   color: $color;
   display: flex;
@@ -79,7 +79,6 @@ $color: #007974;
     top: 50%;
     transform: translateY(-50%);
     display: none;
-    background: fade-out(black, 0.9);
 
     &:hover {
       cursor: pointer;
